@@ -10,7 +10,6 @@ export class StockOutsService {
 
   async create(dto: CreateStockOutDto): Promise<StockOut> {
     return this.dataSource.transaction(async (manager) => {
-      // 🔒 Lock item row
       const item = await manager.findOne(Item, {
         where: { id: dto.itemId },
         lock: { mode: 'pessimistic_write' },
@@ -24,7 +23,6 @@ export class StockOutsService {
         throw new ConflictException('Insufficient available stock');
       }
 
-      // Permanent stock deduction
       item.availableStock -= dto.quantity;
       item.totalStock -= dto.quantity;
 
