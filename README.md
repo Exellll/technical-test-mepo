@@ -4,7 +4,7 @@
 Service backend ini merupakan inventory service sederhana yang dibuat menggunakan **NestJS**, **TypeORM**, dan **PostgreSQL**.  
 Fokus utama implementasi adalah **keamanan transaksi**, **handle concurrency**, dan **konsistensi data stok**.
 
-## 1 Cara menjalankan service
+## 1. Cara menjalankan service
 
 ### Syarat
 - Node.js >= 18
@@ -21,7 +21,7 @@ npm install
 npm run start:dev
 ```
 
-## Database Setup
+## 2. Database Setup
 
 Service ini menggunakan PostgreSQL dan TypeORM
 
