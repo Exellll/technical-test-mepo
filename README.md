@@ -5,7 +5,7 @@ Fokus utama implementasi adalah **keamanan transaksi**, **penanganan concurrency
 
 ## 1 Cara menjalankan service
 
-### Prasyarat
+### Syarat
 - Node.js >= 18
 - PostgreSQL
 - npm atau yarn
